@@ -1,0 +1,20 @@
+{
+  "name": "deru-yandex-images",
+  "version": "1.1.0",
+  "description": "yandex images api",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "keywords": [
+    "yandex-images-api",
+    "api",
+    "images",
+    "yandex"
+  ],
+  "author": "DERUINO",
+  "license": "ISC"
+}
