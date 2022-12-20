@@ -36,8 +36,13 @@ class ImageParser {
     async getImages() {
         await this.getUrlData();
 
-        const array = this.html.match(/img_url=http(\w|\:|\/|\.|\+|\(|\)|-|_|\?|=|\&|\*|\d|!|@|#|\^|\$|\%|a-zA-Z0-9А-Яа-я)+\&amp/gi)
-		      			.map(elem => decodeURIComponent(elem.replace(/(img_url=|\&amp)/gi, "")));
+        let array = [this.html.match(/img_url=http(\w|\:|\/|\.|\+|\(|\)|-|_|\?|=|\&|\*|\d|!|@|#|\^|\$|\%|a-zA-Z0-9А-Яа-я)+\&amp/gi)]
+		      			
+        if (array[0]) {
+            array = array.map(elem => decodeURIComponent(elem.replace(/(img_url=|\&amp)/gi, "")));
+        } else {
+            array = [];
+        }
 
         return {
             items: array.slice(0, this.count),
