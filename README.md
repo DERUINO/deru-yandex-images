@@ -1,6 +1,8 @@
 # yandex-images-api
 
-Becouse official yandex images api does not exists, i wrote parser for yandex images. 
+Becouse official yandex images api does not exists, i wrote parser for yandex images.
+
+(parser can work unstable, becouse yandex periodically usage captca for checking requests)
 
 ## Installation
 
